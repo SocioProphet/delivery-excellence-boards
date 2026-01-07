@@ -1,0 +1,32 @@
+name: Bug
+description: Something is broken or incorrect
+title: "[BUG] "
+labels: ["prophet-kind-bug","prophet-status-triage"]
+body:
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options: ["prophet-priority-p0","prophet-priority-p1","prophet-priority-p2","prophet-priority-p3"]
+    validations: { required: true }
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction steps
+    validations: { required: true }
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations: { required: true }
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations: { required: true }
+  - type: textarea
+    id: verification
+    attributes:
+      label: Fix verification
+      description: How we prove it’s fixed.
+    validations: { required: true }

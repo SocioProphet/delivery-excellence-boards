@@ -1,0 +1,11 @@
+name: smoketest
+on:
+  pull_request:
+  push:
+    branches: [ main ]
+jobs:
+  repo-smoketest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: ./scripts/smoketest_repo.sh

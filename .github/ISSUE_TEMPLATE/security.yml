@@ -1,0 +1,27 @@
+name: Security / Hardening
+description: Threat, vulnerability, hardening, or security design change
+title: "[SEC] "
+labels: ["prophet-kind-security","prophet-status-triage"]
+body:
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options: ["prophet-priority-p0","prophet-priority-p1","prophet-priority-p2","prophet-priority-p3"]
+    validations: { required: true }
+  - type: textarea
+    id: risk
+    attributes:
+      label: Risk statement
+      description: What can go wrong and what’s the impact?
+    validations: { required: true }
+  - type: textarea
+    id: mitigation
+    attributes:
+      label: Proposed mitigation
+    validations: { required: true }
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence plan
+    validations: { required: true }
